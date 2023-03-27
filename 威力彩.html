@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const weili = () => {
+            const Asec = []
+
+            while (Asec.length < 7) {
+                let x = 0
+                do {
+                    x = Math.ceil(Math.random() * 100)
+                }
+                while (x > 38)
+                if (!Asec.includes(x)) {
+                    Asec.push(x)
+                }
+            }
+            let y = Math.ceil(Math.random() * 100)
+            while (y > 8) {
+                y = Math.ceil(Math.random() * 100)
+            }
+            return { Asec, y }
+        }
+        let fin = weili()
+        let Asec = fin.Asec
+        let y = fin.y
+        document.write(`A區號碼為${Asec}<br>B區號碼為${y}`)
+    </script>
+</body>
+
+</html>
